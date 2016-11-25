@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="@color/grassgreen"
-    tools:context="com.example.dvasq.adopciondeperros.Registrar"
+    tools:context=".RegistrarActivity"
     android:gravity="center">
     <ScrollView
         android:layout_width="match_parent"

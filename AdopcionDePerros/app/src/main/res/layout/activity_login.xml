@@ -17,19 +17,42 @@
         android:layout_weight=".4"
         android:background="@drawable/white_border_rec"
         android:gravity="center"
-        android:orientation="vertical">
-        <Button
-            android:layout_width="125dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:hint="Username"
+            android:ems="10"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:id="@+id/etxuser"/>
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/button_shape"
-            android:id="@+id/btnlogin"/>
-        <Button
-            android:layout_width="125dp"
+            android:hint="Password"
+            android:ems="10"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:id="@+id/etxpass"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Registrar"
-            android:background="@drawable/button_shape"
-            android:id="@+id/btnregistrar"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <Button
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:text="Ingresar"
+                android:id="@+id/btningresar"
+                android:layout_marginRight="30dp"/>
+            <Button
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:text="Cancelar"
+                android:id="@+id/btncancelar"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
