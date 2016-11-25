@@ -3,9 +3,9 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="125dp"
-        android:layout_height="125dp" />
+        android:layout_height="125dp" /> -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

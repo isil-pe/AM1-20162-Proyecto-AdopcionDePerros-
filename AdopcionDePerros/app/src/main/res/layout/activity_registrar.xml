@@ -28,14 +28,14 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:hint="@string/nombre"
                 android:imeOptions="actionNext"
                 android:id="@+id/etxnom"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:ems="10"
                 android:hint="@string/apellidos"
                 android:imeOptions="actionNext"
@@ -43,7 +43,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:ems="10"
                 android:hint="@string/tele"
                 android:inputType="phone"
@@ -52,7 +52,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:ems="10"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
@@ -61,7 +61,16 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
+                android:ems="10"
+                android:hint="@string/user"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:id="@+id/etxuser"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:ems="10"
                 android:hint="@string/pass"
                 android:inputType="textPassword"
@@ -70,7 +79,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:ems="10"
                 android:hint="@string/confirm"
                 android:inputType="textPassword"
