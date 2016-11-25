@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AdopcionDePerros</string>
+    <string name="Bien">Bienvenidos</string>
+    <string name="registrar">Registrar</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="tele">Telefono</string>
+    <string name="email">Email</string>
+    <string name="pass">Contraseña</string>
+    <string name="confirm">Confirmar Contraseña</string>
+    <string name="guardar">Guardar</string>
+    <string name="lista">Lista de Perros</string>
+    <string name="fav">Favoritos</string>
+    <string name="poner">Poner en adopcion</string>
+    <string name="salir">Salir</string>
+    <string name="nameofdog">NameOfDog</string>
+    <string name="raceofdog">RaceOfDog</string>
+    <string name="ageofdog">AgeOfDog</string>
+</resources>
