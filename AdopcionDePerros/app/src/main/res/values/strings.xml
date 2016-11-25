@@ -16,4 +16,6 @@
     <string name="nameofdog">NameOfDog</string>
     <string name="raceofdog">RaceOfDog</string>
     <string name="ageofdog">AgeOfDog</string>
+    <string name="user">Username</string>
+    <string name="def">Default</string>
 </resources>

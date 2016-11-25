@@ -1,37 +1,39 @@
 package com.example.dvasq.adopciondeperros.model;
 
+import java.io.Serializable;
+
 /**
  * Created by dvasq on 11/24/2016.
  */
-public class PerroEntity {
+public class PerroEntity implements Serializable {
     private int PerroId;
     private String name;
     private String race;
+    private String gender;
     private int age;
-    private int weight;
-    private int height;
-    private boolean favorite;
+    private String size;
+    private String state;
     private int image;
 
-    public PerroEntity(int perroId, String name, String race, int age, int weight, int height, boolean favorite, int image) {
+    public PerroEntity(int perroId, String name, String race, String gender, int age, String size, String state, int image) {
         PerroId = perroId;
         this.name = name;
         this.race = race;
+        this.gender = gender;
         this.age = age;
-        this.weight = weight;
-        this.height = height;
-        this.favorite = favorite;
+        this.size = size;
+        this.state = state;
         this.image = image;
     }
 
-    public PerroEntity(int perroId, String name, String race, int age, int weight, int height, boolean favorite) {
+    public PerroEntity(int perroId, String name, String race, String gender, int age, String size, String state) {
         PerroId = perroId;
         this.name = name;
         this.race = race;
+        this.gender = gender;
         this.age = age;
-        this.weight = weight;
-        this.height = height;
-        this.favorite = favorite;
+        this.size = size;
+        this.state = state;
     }
 
     public int getPerroId() {
@@ -66,28 +68,20 @@ public class PerroEntity {
         this.age = age;
     }
 
-    public int getWeight() {
-        return weight;
+    public String getSize() {
+        return size;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public void setSize(String size) {
+        this.size = size;
     }
 
-    public int getHeight() {
-        return height;
+    public String getEstado() {
+        return state;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public boolean isFavorite() {
-        return favorite;
-    }
-
-    public void setFavorite(boolean favorite) {
-        this.favorite = favorite;
+    public void setEstado(String estado) {
+        this.state = estado;
     }
 
     public int getImage() {
