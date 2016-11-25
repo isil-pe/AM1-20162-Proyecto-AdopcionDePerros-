@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/black"
+        android:layout_marginBottom="10dp"
+        >
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/descarga"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/eteName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:ems="10"
+        android:hint="name"
+        />
+    <EditText
+        android:id="@+id/eteAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:ems="10"
+        android:hint="age" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="5dp">
+       <TextView
+           android:id="@+id/textrace"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:textSize="18sp"
+           android:layout_height="wrap_content"
+           android:text="RAZA"
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       <Spinner
+           android:id="@+id/race"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="wrap_content"
+           android:gravity="right"
+           android:textSize="18sp"
+           android:spinnerMode="dialog"
+           android:entries="@array/data"
+           android:prompt="seleccionar"
+           />
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:padding="5dp">
+            <TextView
+                android:id="@+id/texttamaño"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:text="Tamaño"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Spinner
+                android:id="@+id/weight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="18sp"
+                android:spinnerMode="dialog"
+                android:entries="@array/tamaño"
+                android:prompt="seleccionar"
+                />
+
+        </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/etePeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:ems="10"
+        android:hint="Peso" />
+
+    <EditText
+        android:id="@+id/etevacunas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:ems="10"
+        android:hint="Vacunas" />
+
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:background="@color/gray"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/guardar"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:gravity="center" />
+
+
+
+</LinearLayout>

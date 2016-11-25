@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="data">
+        <item >Unico</item>
+        <item >Afgano</item>
+        <item >Akita</item>
+        <item >Boxer</item>
+        <item >chow chow</item>
+        <item >Dalmata</item>
+
+    </string-array>
+    <string-array name="tamaño">
+        <item >Pequeño</item>
+        <item >Mediano</item>
+        <item >Grande</item>
+
+    </string-array>
+
+</resources>
