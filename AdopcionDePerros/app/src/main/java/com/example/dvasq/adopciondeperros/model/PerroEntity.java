@@ -6,42 +6,53 @@ import java.io.Serializable;
  * Created by dvasq on 11/24/2016.
  */
 public class PerroEntity implements Serializable {
-    private int PerroId;
+    private int perroId;
     private String name;
     private String race;
     private String gender;
     private int age;
     private String size;
     private String state;
+    private int idUsuario;
     private int image;
 
-    public PerroEntity(int perroId, String name, String race, String gender, int age, String size, String state, int image) {
-        PerroId = perroId;
+    public PerroEntity(int perroId, String name, String race, String gender, int age, String size, String state, int idUsuario, int image) {
+        this.perroId = perroId;
         this.name = name;
         this.race = race;
         this.gender = gender;
         this.age = age;
         this.size = size;
         this.state = state;
+        this.idUsuario = idUsuario;
         this.image = image;
     }
 
-    public PerroEntity(int perroId, String name, String race, String gender, int age, String size, String state) {
-        PerroId = perroId;
+    public PerroEntity(int perroId, String name, String race, String gender, int age, String size, String state, int idUsuario) {
+        this.perroId = perroId;
         this.name = name;
         this.race = race;
         this.gender = gender;
         this.age = age;
         this.size = size;
         this.state = state;
+        this.idUsuario = idUsuario;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public int getPerroId() {
-        return PerroId;
+        return perroId;
     }
 
     public void setPerroId(int perroId) {
-        PerroId = perroId;
+        perroId = perroId;
     }
 
     public String getName() {
@@ -58,6 +69,22 @@ public class PerroEntity implements Serializable {
 
     public void setRace(String race) {
         this.race = race;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public int getAge() {

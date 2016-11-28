@@ -3,6 +3,7 @@ package com.example.dvasq.adopciondeperros;
 import android.app.Application;
 
 import com.example.dvasq.adopciondeperros.model.PerroEntity;
+import com.example.dvasq.adopciondeperros.model.UsuarioEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,26 +13,40 @@ import java.util.List;
  */
 public class PerroApplication extends Application {
     private List<PerroEntity> lstPerro;
+    private List<UsuarioEntity> lstUser;
 
     @Override
     public void onCreate(){
         super.onCreate();
         lstPerro = new ArrayList<>();
+        lstUser = new ArrayList<>();
 
-        PerroEntity p1 = new PerroEntity(1,"Jake","Boxer","M",3,"Large","Disponible");
-        PerroEntity p2 = new PerroEntity(2,"Tiffany","Boxer","F",2,"Large","Disponible");
-        PerroEntity p3 = new PerroEntity(3,"Daisy","Maltese","F",4,"Teacup","Disponible");
-        PerroEntity p4 = new PerroEntity(4,"Snowball","Mix","M",6,"Small","Disponible");
-        PerroEntity p5 = new PerroEntity(5,"Ringo","Mix","M",1,"Large","Disponible");
+        PerroEntity p1 = new PerroEntity(1,"Jake","Boxer","M",3,"Large","Disponible",1);
+        PerroEntity p2 = new PerroEntity(2,"Tiffany","Boxer","F",2,"Large","Disponible",1);
+        PerroEntity p3 = new PerroEntity(3,"Daisy","Maltese","F",4,"Teacup","Disponible",2);
+        PerroEntity p4 = new PerroEntity(4,"Snowball","Mix","M",6,"Small","Disponible",2);
+        PerroEntity p5 = new PerroEntity(5,"Ringo","Mix","M",1,"Large","Disponible",3);
+
+        UsuarioEntity u1 = new UsuarioEntity(1,"Admin","Admin","Daniel Vasquez Fernandez",
+                "941-773-926","dvasquez447@yahoo.com");
+        UsuarioEntity u2 = new UsuarioEntity(2,"User","User","Guillermo Cusihuaman",
+                "754-326-951","usuario2@gmail.com");
+        UsuarioEntity u3 = new UsuarioEntity(3,"Admin","Admin","Daniel Vasquez Fernandez",
+                "654-946-632","usuario3@hotmail.com");
 
         lstPerro.add(p1);
         lstPerro.add(p2);
         lstPerro.add(p3);
         lstPerro.add(p4);
         lstPerro.add(p5);
+
+        lstUser.add(u1);
+        lstUser.add(u2);
+        lstUser.add(u3);
     }
 
     public void addPerro(PerroEntity perroEntity){lstPerro.add(perroEntity);}
+    public void addUsuario(UsuarioEntity usuarioEntity){lstUser.add(usuarioEntity);}
 
     public void removePetById(int perroId){
         int position = -1;
@@ -76,10 +91,23 @@ public class PerroApplication extends Application {
         }
     }
 
+    public UsuarioEntity findUserbyId(int userId){
+        int position=-1;
+        UsuarioEntity user = null;
+        for(int i = 0; i<this.lstUser.size(); i++){
+            user = lstUser.get(i);
+            if(user.getIdUsuario()== userId){
+                break;
+            }
+        }
+        return user;
+    }
+
     public List<PerroEntity> allPerros()
     {
         return this.lstPerro;
     }
+    public List<UsuarioEntity> allUsers(){return this.lstUser;}
 
     public int countPerros()
     {
@@ -90,6 +118,13 @@ public class PerroApplication extends Application {
         if(this.lstPerro.size()>0)
         {
             return this.lstPerro.get(this.lstPerro.size()-1);
+        }
+        return null;
+    }
+
+    public UsuarioEntity lastUser(){
+        if(this.lstUser.size()>0){
+            return this.lstUser.get(this.lstUser.size()-1);
         }
         return null;
     }

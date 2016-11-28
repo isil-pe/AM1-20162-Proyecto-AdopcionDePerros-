@@ -2,15 +2,17 @@
     <string name="app_name">AdopcionDePerros</string>
     <string name="Bien">Bienvenidos</string>
     <string name="registrar">Registrar</string>
-    <string name="nombre">Nombre</string>
+    <string name="nombre">Nombre:</string>
     <string name="apellidos">Apellidos</string>
-    <string name="tele">Telefono</string>
-    <string name="email">Email</string>
+    <string name="tele">Telefono:</string>
+    <string name="email">Email:</string>
     <string name="pass">Contraseña</string>
     <string name="confirm">Confirmar Contraseña</string>
     <string name="guardar">Guardar</string>
     <string name="lista">Lista de Perros</string>
     <string name="fav">Favoritos</string>
+    <string name="favortie">Favorito?</string>
+    <string name="contact">Contacto</string>
     <string name="poner">Poner en adopcion</string>
     <string name="salir">Salir</string>
     <string name="nameofdog">NameOfDog</string>
@@ -18,4 +20,12 @@
     <string name="ageofdog">AgeOfDog</string>
     <string name="user">Username</string>
     <string name="def">Default</string>
+    <string name="race">Raza:</string>
+    <string name="age">Edad:</string>
+    <string name="gender">Genero:</string>
+    <string name="size">Tamaño:</string>
+    <string name="state">Estado:</string>
+    <string name="stateOfDog">Estado de perro</string>
+    <string name="sizeOfDog">Size of Dog</string>
+    <string name="genderOfDog">Dog's gender</string>
 </resources>

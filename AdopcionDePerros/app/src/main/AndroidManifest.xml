@@ -20,7 +20,9 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrarActivity" />
         <activity android:name=".PrincipalActivity" />
-        <activity android:name=".ListaPerroActivity"></activity>
+        <activity android:name=".ListaPerroActivity" />
+        <activity android:name=".PerroDetalleActivity" />
+        <activity android:name=".ContactActivity"></activity>
     </application>
 
 </manifest>

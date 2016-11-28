@@ -1,5 +1,6 @@
 package com.example.dvasq.adopciondeperros;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -65,6 +66,11 @@ public class ListaPerroActivity extends AppCompatActivity {
     }
 
     private void gotoPerroDetail(PerroEntity perroEntity){
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Perro",perroEntity);
 
+        Intent intent = new Intent(this,PerroDetalleActivity.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }
