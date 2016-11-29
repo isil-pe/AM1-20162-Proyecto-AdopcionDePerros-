@@ -27,5 +27,5 @@
     <string name="state">Estado:</string>
     <string name="stateOfDog">Estado de perro</string>
     <string name="sizeOfDog">Size of Dog</string>
-    <string name="genderOfDog">Dog's gender</string>
+    <string name="genderOfDog">Dogs gender</string>
 </resources>

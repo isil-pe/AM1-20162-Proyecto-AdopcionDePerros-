@@ -36,10 +36,21 @@ public class PrincipalActivity extends AppCompatActivity {
                 gotoList();
             }
         });
+        btnPoner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoAgregar();
+            }
+        });
     }
 
     private void gotoList(){
         Intent intent = new Intent(this,ListaPerroActivity.class);
+        startActivity(intent);
+    }
+
+    private void gotoAgregar(){
+        Intent intent = new Intent(this,PublicarActivity.class);
         startActivity(intent);
     }
 }
