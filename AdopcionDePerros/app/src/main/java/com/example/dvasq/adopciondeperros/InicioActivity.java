@@ -24,7 +24,7 @@ public class InicioActivity extends AppCompatActivity implements View.OnClickLis
     private void gotoMain(){
         Intent intent = new Intent(InicioActivity.this,LoginActivity.class);
         startActivity(intent);
-        finish();
+
     }
 
     private void gotoRegis(){

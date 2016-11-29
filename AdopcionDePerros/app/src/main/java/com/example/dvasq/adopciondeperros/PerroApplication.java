@@ -137,4 +137,38 @@ public class PerroApplication extends Application {
         }
         return null;
     }
+
+    public UsuarioEntity validar(String user, String pass){
+        int position = -1;
+        UsuarioEntity usuario = null;
+
+        for (int i = 0; i <this.lstUser.size() ; i++){
+            usuario = lstUser.get(i);
+            if(usuario.getUsername().equals(user) && usuario.getPassword().equals(pass)){
+                position = i;
+                break;
+            }
+        }
+        if(position>=0 && position<lstUser.size())
+        {
+            usuario = lstUser.get(position);
+        }
+        return usuario;
+    }
+
+    public boolean validarUsuario(String user){
+        Boolean bool = false;
+        UsuarioEntity usuario;
+        for (int i = 0; i <this.lstUser.size() ; i++){
+            usuario = lstUser.get(i);
+            if(usuario.getUsername().equals(user)){
+                bool = false;
+                break;
+            }
+            else{
+                bool = true;
+            }
+        }
+        return bool;
+    }
 }

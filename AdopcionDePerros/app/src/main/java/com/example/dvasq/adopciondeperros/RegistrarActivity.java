@@ -6,13 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.dvasq.adopciondeperros.model.UsuarioEntity;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegistrarActivity extends AppCompatActivity {
     EditText etxNom, etxApe, etxTele, etxEmail, etxUser, etxPass, etxConfirm;
     Button btnGuardar;
-
+    PerroApplication application;
     String name, phone, email, username, password;
     UsuarioEntity usuarioEntity;
     @Override
@@ -24,8 +28,14 @@ public class RegistrarActivity extends AppCompatActivity {
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addUser();
-                gotoPrincipal();
+                if(validar()) {
+                    addUser();
+                    gotoPrincipal();
+                }else{
+                    Toast.makeText(RegistrarActivity.this, "Revisar campos",
+                            Toast.LENGTH_SHORT).show();
+
+                }
             }
         });
     }
@@ -42,8 +52,65 @@ public class RegistrarActivity extends AppCompatActivity {
         btnGuardar = (Button)findViewById(R.id.btnGuardar);
     }
 
+    private boolean validar(){
+        application = (PerroApplication)getApplication();
+        name = etxNom.getText().toString().trim();
+        String ape = etxApe.getText().toString().trim();
+        phone = etxTele.getText().toString().trim();
+        email = etxEmail.getText().toString().trim();
+        username = etxUser.getText().toString().trim();
+        password = etxPass.getText().toString().trim();
+        String confirm = etxConfirm.getText().toString().trim();
+
+        if(name.isEmpty()){
+            etxNom.setError("Obligatorio");
+            return false;
+        }
+        if(ape.isEmpty()){
+            etxApe.setError("Obligatorio");
+            return false;
+        }
+        if(phone.isEmpty()){
+            etxTele.setError("Obligatorio");
+            return false;
+        }
+        if(email.isEmpty()){
+            etxEmail.setError("Obligatorio");
+            return false;
+        }
+        if(username.isEmpty()){
+            etxUser.setError("Obligatorio");
+            return false;
+        }
+        if(password.isEmpty()){
+            etxPass.setError("Obligatorio");
+            return false;
+        }
+        if(confirm.isEmpty()){
+            etxConfirm.setError("Obligatorio");
+            return false;
+        }
+
+        if(!password.equals(confirm)){
+            etxPass.setError("Contraseñas no son el mismo");
+            return false;
+        }
+
+        if(!isEmailValid(email)){
+            etxEmail.setError("Email Invalido");
+            return false;
+        }
+
+        if(!application.validarUsuario(username)){
+            etxUser.setError("Usuario ya existe");
+            return false;
+        }
+
+        return true;
+    }
+
     private void addUser(){
-        PerroApplication application = (PerroApplication)getApplication();
+        application = (PerroApplication)getApplication();
 
         name = etxNom.getText().toString().trim() +" "+ etxApe.getText().toString().trim();
         phone = etxTele.getText().toString().trim();
@@ -68,5 +135,25 @@ public class RegistrarActivity extends AppCompatActivity {
         Intent intent = new Intent(this,PrincipalActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public boolean isEmailValid(String email) {
+        String regExpn =
+                "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
+                        +"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                        +"[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\."
+                        +"([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                        +"[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
+                        +"([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$";
+
+        CharSequence inputStr = email;
+
+        Pattern pattern = Pattern.compile(regExpn, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(inputStr);
+
+        if(matcher.matches())
+            return true;
+        else
+            return false;
     }
 }
