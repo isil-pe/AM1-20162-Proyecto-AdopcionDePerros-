@@ -92,7 +92,8 @@
                 android:ems="10"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/guardar"
-                android:background="@drawable/button_shape"/>
+                android:background="@drawable/button_shape"
+                android:id="@+id/btnGuardar"/>
         </LinearLayout>
     </ScrollView>
 

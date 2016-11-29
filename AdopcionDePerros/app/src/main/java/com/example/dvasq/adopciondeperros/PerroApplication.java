@@ -14,6 +14,15 @@ import java.util.List;
 public class PerroApplication extends Application {
     private List<PerroEntity> lstPerro;
     private List<UsuarioEntity> lstUser;
+    private UsuarioEntity currentUser;
+
+    public UsuarioEntity getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(UsuarioEntity currentUser) {
+        this.currentUser = currentUser;
+    }
 
     @Override
     public void onCreate(){
