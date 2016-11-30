@@ -23,7 +23,8 @@
         <activity android:name=".PublicarActivity" />
         <activity android:name=".ListaPerroActivity" />
         <activity android:name=".PerroDetalleActivity" />
-        <activity android:name=".ContactActivity"></activity>
+        <activity android:name=".ContactActivity" />
+        <activity android:name=".FavoriteActivity"></activity>
     </application>
 
 </manifest>

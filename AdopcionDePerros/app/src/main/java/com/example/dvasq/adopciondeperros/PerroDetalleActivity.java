@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.dvasq.adopciondeperros.model.FavoriteEntity;
 import com.example.dvasq.adopciondeperros.model.PerroEntity;
 import com.example.dvasq.adopciondeperros.model.UsuarioEntity;
 
@@ -43,7 +45,17 @@ public class PerroDetalleActivity extends AppCompatActivity {
         btnFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //implementar funcionamiento de favoritos
+                usuarioEntity = perroApplication.getCurrentUser();
+                if(perroApplication.findFavoriteExist(usuarioEntity.getIdUsuario(),perroEntity.getPerroId())){
+                    perroApplication.removeFavorite(usuarioEntity.getIdUsuario(),perroEntity.getPerroId());
+                    Toast.makeText(PerroDetalleActivity.this, "Removido de favoritos!",
+                            Toast.LENGTH_SHORT).show();
+                }else{
+                    FavoriteEntity f = new FavoriteEntity(usuarioEntity.getIdUsuario(), perroEntity.getPerroId());
+                    perroApplication.addFavorite(f);
+                    Toast.makeText(PerroDetalleActivity.this, "Añadido a favoritos!",
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

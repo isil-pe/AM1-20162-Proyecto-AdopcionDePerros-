@@ -12,6 +12,7 @@ import com.example.dvasq.adopciondeperros.model.UsuarioEntity;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText eteUser, etePass;
+    UsuarioEntity usuario;
     private Button btningresar;
     private Button btnCancelar;
     private String user, pass;
@@ -38,6 +39,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(validar()){
+                    PerroApplication application = (PerroApplication)getApplication();
+                    application.setCurrentUser(usuario);
                     gotoMain();
                 }
                 else{
@@ -56,10 +59,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean validar(){
-        String user = eteUser.getText().toString().trim();
-        String pass = etePass.getText().toString().trim();
+        user = eteUser.getText().toString().trim();
+        pass = etePass.getText().toString().trim();
         PerroApplication application = (PerroApplication)getApplication();
-        UsuarioEntity usuario = application.validar(user,pass);
 
         if(user.isEmpty()){
             eteUser.setError("Obligatorio");
@@ -70,11 +72,14 @@ public class LoginActivity extends AppCompatActivity {
             return false;
         }
 
+        usuario = application.validar(user,pass);
+
         if(usuario==null){
             return false;
         }
 
-        application.setCurrentUser(usuario);
+
+
         return true;
     }
 

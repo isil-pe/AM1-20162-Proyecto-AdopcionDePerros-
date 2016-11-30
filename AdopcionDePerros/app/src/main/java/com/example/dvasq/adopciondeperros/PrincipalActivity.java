@@ -42,6 +42,18 @@ public class PrincipalActivity extends AppCompatActivity {
                 gotoAgregar();
             }
         });
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoInicio();
+            }
+        });
+        btnFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoFavorite();
+            }
+        });
     }
 
     private void gotoList(){
@@ -51,6 +63,17 @@ public class PrincipalActivity extends AppCompatActivity {
 
     private void gotoAgregar(){
         Intent intent = new Intent(this,PublicarActivity.class);
+        startActivity(intent);
+    }
+
+    private void gotoInicio(){
+        Intent intent = new Intent(this, InicioActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    private void gotoFavorite(){
+        Intent intent = new Intent(this, FavoriteActivity.class);
         startActivity(intent);
     }
 }

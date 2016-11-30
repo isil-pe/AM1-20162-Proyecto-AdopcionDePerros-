@@ -5,31 +5,30 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.dvasq.adopciondeperros.adapter.PerroAdapter;
 import com.example.dvasq.adopciondeperros.model.PerroEntity;
+import com.example.dvasq.adopciondeperros.model.UsuarioEntity;
 
 import java.util.List;
 
-public class ListaPerroActivity extends AppCompatActivity {
-    private TextView tviCount;
+public class FavoriteActivity extends AppCompatActivity {
     private ListView lstPets;
     private List<PerroEntity> data;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_perro);
+        setContentView(R.layout.activity_favorite);
         loadData();
         app();
     }
 
     private void app(){
         ui();
-        loadCount();
         events();
     }
 
@@ -45,20 +44,13 @@ public class ListaPerroActivity extends AppCompatActivity {
     }
 
     private void loadData() {
-
-        PerroApplication application= (PerroApplication)getApplication();
+        PerroApplication application = (PerroApplication)getApplication();
+        //UsuarioEntity current = application.getCurrentUser();
         data= application.allPerros();
-
-    }
-
-    private void loadCount(){
-        PerroApplication application= (PerroApplication)getApplication();
-        tviCount.setText("Perros en lista: " + application.countPerros());
     }
 
     private void ui() {
-        tviCount = (TextView)findViewById(R.id.tviCount);
-        lstPets= (ListView)findViewById(R.id.lsvPerro);
+        lstPets= (ListView)findViewById(R.id.lsvFavPerro);
     }
 
     private void events() {
