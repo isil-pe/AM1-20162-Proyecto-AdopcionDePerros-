@@ -39,3 +39,6 @@ String name     | int age       | int idUser
 String lastName | String breed  | int idDog
 String email    | String Size   | 
 String password | String gender | 
+
+
+## Diagrama 
