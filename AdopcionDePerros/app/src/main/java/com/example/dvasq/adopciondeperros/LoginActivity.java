@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.dvasq.adopciondeperros.model.UsuarioEntity;
@@ -16,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btningresar;
     private Button btnCancelar;
     private String user, pass;
+    private ImageView imgIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     private void ui(){
         btningresar= (Button)findViewById(R.id.btningresar);
         btnCancelar = (Button)findViewById(R.id.btncancelar);
+        imgIcon = (ImageView)findViewById(R.id.imgDogIcon);
 
         eteUser = (EditText)findViewById(R.id.etxuser);
         etePass = (EditText)findViewById(R.id.etxpass);
@@ -56,6 +61,18 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        imgIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spin2();
+            }
+        });
+    }
+
+    private void spin2(){
+        Animation spin = AnimationUtils.loadAnimation(this, R.anim.spin);
+        imgIcon.startAnimation(spin);
     }
 
     private boolean validar(){
@@ -89,4 +106,5 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 }

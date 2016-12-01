@@ -12,6 +12,7 @@
         android:layout_height="0dp"
         android:layout_weight=".6"
         android:src="@drawable/dogicon"
+        android:id="@+id/imgDogIcon"
         android:adjustViewBounds="true"/>
 
     <LinearLayout
