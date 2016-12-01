@@ -37,8 +37,9 @@ User            | Dog           | Likes
 int idUser      | int idDog     | int idLikes 
 String name     | int age       | int idUser
 String lastName | String breed  | int idDog
-String email    | String Size   | 
-String password | String gender | 
+String phone    | String Size   |
+String email    | String gender | 
+String password |              
 
 
 ## Diagrama 
