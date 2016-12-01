@@ -33,8 +33,9 @@ public class PerroDetalleActivity extends AppCompatActivity {
         ui();
 
         if(perroEntity!=null){
+            String age = Integer.toString(perroEntity.getAge());
             tviDeNom.setText(perroEntity.getName());
-//            tviDeEdad.setText(perroEntity.getAge());
+            tviDeEdad.setText(age);
             tviDeRaza.setText(perroEntity.getRace());
             tviDeEstado.setText(perroEntity.getEstado());
             tviDeTama.setText(perroEntity.getSize());
