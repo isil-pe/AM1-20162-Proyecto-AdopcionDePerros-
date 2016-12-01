@@ -33,4 +33,5 @@
     <string name="SelectR">Selecciona Raza</string>
     <string name="SelectT">Selecciona Tamaño</string>
     <string name="Mis">Mis Perros</string>
+    <string name="agregar">Agregar</string>
 </resources>

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:id="@+id/ll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grassgreen"
     android:padding="20dp">
 
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,10 +20,25 @@
             android:layout_marginBottom="10dp">
 
             <ImageView
+                android:id="@+id/setPicture"
                 android:layout_width="250dp"
                 android:layout_height="250dp"
-                android:src="@drawable/descarga"
+                android:contentDescription="aqui se pondra la foto"
+                android:layout_below="@+id/btnImage"
+                android:background="@drawable/white_border_rec"
                 android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btnImage"
+                android:background="@color/gray"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/agregar"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:gravity="center" />
 
 
 
@@ -81,7 +98,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
                 <Spinner
-                    android:id="@+id/weight"
+                    android:id="@+id/spsize"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -94,21 +111,83 @@
            </LinearLayout>
 
 
-            <EditText
-                android:id="@+id/etePeso"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:ems="5"
-                android:hint="Peso" />
+                android:padding="5dp">
 
-            <EditText
-                android:id="@+id/etevacunas"
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="estado: "
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <RadioGroup
+                    android:id="@+id/rbEst"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/rbD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="disponible" />
+
+                    <RadioButton
+                        android:id="@+id/rbA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adoptado" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:ems="10"
-                android:hint="Vacunas" />
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Género: "
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <RadioGroup
+                    android:id="@+id/rbGenero"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/rbM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="M" />
+
+                    <RadioButton
+                        android:id="@+id/rbH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="H" />
+
+                </RadioGroup>
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/btnSignUp"

@@ -7,6 +7,21 @@
         <item >Boxer</item>
         <item >chow chow</item>
         <item >Dalmata</item>
+        <item >Husky Siberiano</item>
+        <item >Pug</item>
+        <item >Labrador retriever</item>
+        <item >Pastor Aleman</item>
+        <item >Rottweiler</item>
+        <item >Bulldog</item>
+        <item >Caniche</item>
+        <item >Pit bull</item>
+        <item >Doberman</item>
+        <item >Shih Tzu</item>
+        <item >Chihuahua</item>
+        <item >Gran Danes</item>
+        <item >San Bernardo</item>
+        <item >Pekines</item>
+        <item >Cocker</item>
 
     </string-array>
     <string-array name="tamaño">
