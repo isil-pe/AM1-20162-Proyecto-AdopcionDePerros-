@@ -6,7 +6,7 @@
     <ImageView
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:src="@drawable/pup1"
+        android:src="@drawable/dog_small"
         android:id="@+id/iviPerro"/>
     <LinearLayout
         android:layout_width="match_parent"

@@ -28,4 +28,9 @@
     <string name="stateOfDog">Estado de perro</string>
     <string name="sizeOfDog">Size of Dog</string>
     <string name="genderOfDog">Dogs gender</string>
+    <string name="Eliminar">Eliminar</string>
+    <string name="Editar">Editar</string>
+    <string name="SelectR">Selecciona Raza</string>
+    <string name="SelectT">Selecciona Tamaño</string>
+    <string name="Mis">Mis Perros</string>
 </resources>

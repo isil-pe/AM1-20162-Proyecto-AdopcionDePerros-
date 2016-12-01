@@ -4,10 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class InicioActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnLogin, btnRegistrar;
+    private ImageView imgIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,9 +20,16 @@ public class InicioActivity extends AppCompatActivity implements View.OnClickLis
 
         btnLogin = (Button)findViewById(R.id.btnlogin);
         btnRegistrar = (Button)findViewById(R.id.btnregistrar);
+        imgIcon = (ImageView)findViewById(R.id.imgDogIcon);
 
         btnLogin.setOnClickListener(this);
         btnRegistrar.setOnClickListener(this);
+        imgIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spin();
+            }
+        });
     }
 
     private void gotoMain(){
@@ -30,6 +41,11 @@ public class InicioActivity extends AppCompatActivity implements View.OnClickLis
     private void gotoRegis(){
         Intent intent = new Intent(InicioActivity.this,RegistrarActivity.class);
         startActivity(intent);
+    }
+
+    private void spin(){
+        Animation spin = AnimationUtils.loadAnimation(this, R.anim.spin);
+        imgIcon.startAnimation(spin);
     }
 
     @Override

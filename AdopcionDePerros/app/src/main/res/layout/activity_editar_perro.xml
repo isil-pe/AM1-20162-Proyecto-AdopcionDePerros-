@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@color/grassgreen"
+    tools:context="com.example.dvasq.adopciondeperros.EditarPerroActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight=".4"
+        android:src="@drawable/dog_normal"
+        android:id="@+id/iviDePerro"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".6">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".6"
+        android:orientation="vertical"
+        android:background="@drawable/white_border_rec"
+        android:padding="20dp">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="@string/nameofdog"
+            android:textSize="18sp"
+            android:imeOptions="actionNext"
+            android:textColor="@color/black"
+            android:id="@+id/eteEditNombre"/>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="@string/race"
+            android:imeOptions="actionNext"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:id="@+id/eteEditRaza"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="@string/ageofdog"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:id="@+id/eteEditEdad"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="@string/genderOfDog"
+            android:imeOptions="actionNext"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:id="@+id/eteEditGenero"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="@string/size"
+            android:imeOptions="actionNext"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:id="@+id/eteEditTamano"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="@string/stateOfDog"
+            android:imeOptions="actionDone"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:id="@+id/eteEditEstado"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <Button
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Eliminar"
+                android:background="@drawable/button_shape"
+                android:id="@+id/btnElim"/>
+
+            <Button
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Editar"
+                android:background="@drawable/button_shape"
+                android:layout_marginLeft="35dp"
+                android:id="@+id/btnEdit"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

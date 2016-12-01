@@ -24,7 +24,9 @@
         <activity android:name=".ListaPerroActivity" />
         <activity android:name=".PerroDetalleActivity" />
         <activity android:name=".ContactActivity" />
-        <activity android:name=".FavoriteActivity"></activity>
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".MisPerrosActivity" />
+        <activity android:name=".EditarPerroActivity"></activity>
     </application>
 
 </manifest>

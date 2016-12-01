@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class PrincipalActivity extends AppCompatActivity {
-    Button btnListar, btnPoner, btnFavorite, btnSalir;
+    Button btnListar, btnPoner, btnFavorite, btnSalir, btnMisPerros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class PrincipalActivity extends AppCompatActivity {
         btnPoner = (Button)findViewById(R.id.btnponer);
         btnFavorite = (Button)findViewById(R.id.btnFavoritos);
         btnSalir = (Button)findViewById(R.id.btnsalir);
+        btnMisPerros = (Button)findViewById(R.id.btnMisPerros);
     }
 
     private void events(){
@@ -54,6 +55,12 @@ public class PrincipalActivity extends AppCompatActivity {
                 gotoFavorite();
             }
         });
+        btnMisPerros.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoMisPerros();
+            }
+        });
     }
 
     private void gotoList(){
@@ -74,6 +81,11 @@ public class PrincipalActivity extends AppCompatActivity {
 
     private void gotoFavorite(){
         Intent intent = new Intent(this, FavoriteActivity.class);
+        startActivity(intent);
+    }
+
+    private void gotoMisPerros(){
+        Intent intent = new Intent(this, MisPerrosActivity.class);
         startActivity(intent);
     }
 }

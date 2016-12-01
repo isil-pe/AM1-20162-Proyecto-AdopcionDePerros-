@@ -31,24 +31,35 @@
             android:layout_height="wrap_content"
             android:text="@string/lista"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/button_shape"
             android:id="@+id/btnlista"/>
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/fav"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/button_shape"
             android:id="@+id/btnFavoritos"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Mis"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_shape"
+            android:id="@+id/btnMisPerros"/>
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/poner"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/button_shape"
             android:id="@+id/btnponer"/>
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/salir"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/button_shape"
             android:id="@+id/btnsalir"/>
 
     </LinearLayout>
