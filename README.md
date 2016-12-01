@@ -26,20 +26,25 @@ Funcionalidades :
 
 - Información del Perro
 
+- Mostrar perros favoritos
+
 ## Base de Datos 
 
 Adoptame.db
 
 Tablas : 
 
-User            | Dog           | Likes  
+User            | Dog           | Favorites  
 ------------    | ------------- | -------------
-int idUser      | int idDog     | int idLikes 
-String name     | int age       | int idUser
-String lastName | String breed  | int idDog
-String phone    | String Size   |
-String email    | String gender | 
-String password |              
+int idUser      | int idDog     | int idUser
+String name     | int idUser    | int idDog 
+String lastName | int age       |
+String phone    | String race   |
+String email    | String Size   | 
+String password | String gender |
+                | String state
 
 
 ## Diagrama 
+
+
