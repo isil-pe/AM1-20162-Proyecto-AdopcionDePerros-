@@ -28,6 +28,8 @@ Funcionalidades :
 
 - Mostrar perros favoritos
 
+- Mostrar mis perros en adopción
+
 ## Base de Datos 
 
 Adoptame.db
