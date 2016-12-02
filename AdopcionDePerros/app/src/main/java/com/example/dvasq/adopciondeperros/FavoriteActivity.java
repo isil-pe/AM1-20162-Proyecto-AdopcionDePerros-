@@ -46,7 +46,7 @@ public class FavoriteActivity extends AppCompatActivity {
     private void loadData() {
         PerroApplication application = (PerroApplication)getApplication();
         //UsuarioEntity current = application.getCurrentUser();
-        data= application.allPerros();
+        data= application.allFavorite();
     }
 
     private void ui() {

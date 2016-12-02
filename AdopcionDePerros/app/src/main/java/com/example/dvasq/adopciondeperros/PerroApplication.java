@@ -186,6 +186,17 @@ public class PerroApplication extends Application {
         return user;
     }
 
+    public List<PerroEntity> allFavorite( ){
+        //lstFavorite = new ArrayList<>();
+        List<PerroEntity>lstFav = new ArrayList<>();
+        PerroEntity perroEntity;
+        for(FavoriteEntity f : lstFavorite){
+                perroEntity = findPerrobyId(f.getPerroId());
+                lstFav.add(perroEntity);
+        }
+        return lstFav;
+    }
+
     public List<PerroEntity> allPerros()
     {
         return this.lstPerro;
