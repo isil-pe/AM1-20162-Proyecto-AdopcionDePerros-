@@ -49,4 +49,4 @@ String password | String gender |
 
 ## Diagrama 
 
-![alt tag] (https://github.com/isil-pe/AM1-20162-Proyecto-AdopcionDePerros-/blob/master/PRESENT.png)
+![alt tag] (https://github.com/isil-pe/AM1-20162-Proyecto-AdopcionDePerros-/blob/master/Present.png)
