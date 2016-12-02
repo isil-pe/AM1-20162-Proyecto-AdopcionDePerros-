@@ -28,8 +28,8 @@ public class PerroApplication extends Application {
         lstFavPerros = new ArrayList<>();
 
         PerroEntity p1 = new PerroEntity(1,"Jake","Boxer","M",3,"Large","Disponible",1);
-        PerroEntity p2 = new PerroEntity(2,"Tiffany","Boxer","F",2,"Large","Disponible",1);
-        PerroEntity p3 = new PerroEntity(3,"Daisy","Maltese","F",4,"Teacup","Disponible",2);
+        PerroEntity p2 = new PerroEntity(2,"Tiffany","Boxer","H",2,"Large","Disponible",1);
+        PerroEntity p3 = new PerroEntity(3,"Daisy","Maltese","H",4,"Teacup","Disponible",2);
         PerroEntity p4 = new PerroEntity(4,"Snowball","Mix","M",6,"Small","Disponible",2);
         PerroEntity p5 = new PerroEntity(5,"Ringo","Mix","M",1,"Large","Disponible",3);
 

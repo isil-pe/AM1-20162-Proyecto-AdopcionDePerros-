@@ -132,7 +132,7 @@ public class PublicarActivity extends AppCompatActivity {
                         genero = "M";
                         break;
                     case R.id.rbH:
-                        genero = "F";
+                        genero = "H";
                         break;
                 }
             }
